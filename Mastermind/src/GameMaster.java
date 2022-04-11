@@ -32,4 +32,14 @@ public class GameMaster {
 		}
 		return generatedArray;
 	}
+	
+	public int[] repeatingBoard(){
+		int[] generatedArray = new int[4];
+		Random rand = new Random();
+		
+		for (int i = 0; i < 4;) {
+			generatedArray[i] = rand.nextInt(7);
+		}
+		return generatedArray;
+	}
 }
