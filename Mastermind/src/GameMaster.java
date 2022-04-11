@@ -2,6 +2,16 @@ import java.util.Random;
 public class GameMaster {
 
 	public Tile AnswerGen() {
+		int[] numArr = noRepeatBoard();
+		Pin p1 = new Pin(numArr[0]);
+		Pin p2 = new Pin(numArr[1]);
+		Pin p3 = new Pin(numArr[2]);
+		Pin p4 = new Pin(numArr[3]);
+		Tile answerTile = new Tile(p1,p2,p3,p4);
+		return answerTile;
+	}
+	
+	public int[] noRepeatBoard(){
 		boolean isTaken = false;
 		int[] generatedArray = new int[4];
 		Random rand = new Random();
@@ -20,11 +30,6 @@ public class GameMaster {
 				isTaken = false;
 			}
 		}
-		Pin p1 = new Pin(generatedArray[0]);
-		Pin p2 = new Pin(generatedArray[1]);
-		Pin p3 = new Pin(generatedArray[2]);
-		Pin p4 = new Pin(generatedArray[3]);
-		Tile answerTile = new Tile(p1,p2,p3,p4);
-		return answerTile;
+		return generatedArray;
 	}
 }
