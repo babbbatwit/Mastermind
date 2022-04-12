@@ -17,7 +17,7 @@ public class GameMaster {
 		Random rand = new Random();
 		
 		for (int i = 0; i < 4;) {
-			int tempNum = rand.nextInt(7);
+			int tempNum = rand.nextInt(6) + 1;
 			for (int j = 0; j < 4; j++) {
 				if (generatedArray[j] == tempNum) {
 					isTaken = true;
@@ -32,13 +32,13 @@ public class GameMaster {
 		}
 		return generatedArray;
 	}
-	
+	//currently unused but could be used for harder version of the game
 	public int[] repeatingBoard(){
 		int[] generatedArray = new int[4];
 		Random rand = new Random();
 		
 		for (int i = 0; i < 4;) {
-			generatedArray[i] = rand.nextInt(7);
+			generatedArray[i] = rand.nextInt(6) + 1;
 		}
 		return generatedArray;
 	}
