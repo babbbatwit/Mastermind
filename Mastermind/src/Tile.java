@@ -12,4 +12,8 @@ public class Tile {
 		this.p3 = p3;
 		this.p4 = p4;
 	}
+	public String toString() {
+		String returnedString = String.format("%s, %s, %s, %s", p1.getColorName(), p2.getColorName(), p3.getColorName(), p3.getColorName());
+		return returnedString;
+	}
 }
