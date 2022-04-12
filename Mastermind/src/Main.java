@@ -13,5 +13,7 @@ public class Main extends Application{
 		Scene s = new Scene(p, 400, 400);
 		primaryStage.setScene(s);
 		primaryStage.show();
+		Tile masterTile = GameMaster.AnswerGen();
+		System.out.println(masterTile.toString());
 	}
 }
