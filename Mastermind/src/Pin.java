@@ -1,7 +1,15 @@
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 public class Pin {
 	private int color;
+	private Circle visual;
+	private boolean isClickable;
 	
+	public Pin(int c, Circle v) {
+		v = visual;
+		color = c;
+	}
 	public Pin(int c) {
 		color = c;
 	}
@@ -27,6 +35,43 @@ public class Pin {
 			return "Black";
 		default:
 			return "Empty";
+		}
+	}
+	
+	public void clickable(){
+		isClickable = true;
+	}
+	public void notClickable() {
+		isClickable = false;
+	}
+	public void onClick() {
+		if(color == 6) {
+			color = 1;
+		}
+		else {
+			color++;
+		}
+		switch(color) {
+		case 1:
+			visual.setFill(Color.BLUE);
+			break;
+		case 2:
+			visual.setFill(Color.RED);
+			break;
+		case 3:
+			visual.setFill(Color.GREEN);
+			break;
+		case 4:
+			visual.setFill(Color.YELLOW);
+			break;
+		case 5:
+			visual.setFill(Color.PURPLE);
+			break;
+		case 6:
+			visual.setFill(Color.BLACK);
+			break;
+		default:
+			visual.setFill(Color.WHITE);
 		}
 	}
 }

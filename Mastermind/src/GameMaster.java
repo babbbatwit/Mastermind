@@ -1,7 +1,14 @@
 import java.util.Random;
 public class GameMaster {
 
-	public static Tile AnswerGen() {
+	private static int round;
+	
+	public static void intialize() {
+		round = 0;
+		
+	}
+	
+	public static Tile answerGen() {
 		int[] numArr = noRepeatBoard();
 		Pin p1 = new Pin(numArr[0]);
 		Pin p2 = new Pin(numArr[1]);
