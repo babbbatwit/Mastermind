@@ -26,4 +26,7 @@ public class Tile {
 		String returnedString = String.format("%s, %s, %s, %s", p1.getColorName(), p2.getColorName(), p3.getColorName(), p4.getColorName());
 		return returnedString;
 	}
+	public void setOpacity(double i) {
+		container.setOpacity(i);
+	}
 }
