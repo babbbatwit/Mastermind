@@ -2,7 +2,7 @@ import java.util.Random;
 public class GameMaster {
 
 	private static int round;
-	private static boolean hasWon;
+	private static boolean gameOver;
 	
 	public static void intialize() {
 		round = 1;
@@ -10,8 +10,8 @@ public class GameMaster {
 	}
 
 	public static boolean winChecker(Tile t1, Tile answer) {
-		hasWon = t1.equals(answer);
-		return hasWon;
+		gameOver = t1.equals(answer);
+		return gameOver;
 	}
 	
 	public static int hits(Tile t1, Tile answer){
@@ -45,10 +45,10 @@ public class GameMaster {
 	public static int getRound() {
 		return round;
 	}
-	public static boolean checkHasWon() {
-		return hasWon;
+	public static boolean checkGameOver() {
+		return gameOver;
 	}
-	public static void setWin() {
-		hasWon = true;
+	public static void setGameOver() {
+		gameOver = true;
 	}
 }

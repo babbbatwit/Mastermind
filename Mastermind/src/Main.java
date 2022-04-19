@@ -23,7 +23,6 @@ public class Main extends Application implements Initializable{
 		launch(args);
 	}
 	
-	
 	@FXML
 	Circle ca1;
 	@FXML
@@ -181,6 +180,22 @@ public class Main extends Application implements Initializable{
 	@FXML
 	VBox answerBox;
 	@FXML
+	VBox HB1;
+	@FXML
+	VBox HB2;
+	@FXML
+	VBox HB3;
+	@FXML
+	VBox HB4;
+	@FXML
+	VBox HB5;
+	@FXML
+	VBox HB6;
+	@FXML
+	VBox HB7;
+	@FXML
+	VBox HB8;
+	@FXML
 	Button b;
 	
 	Tile currentTile;
@@ -192,8 +207,6 @@ public class Main extends Application implements Initializable{
 		primaryStage.setTitle("Mastermind");
 		primaryStage.setScene(scene);
 		primaryStage.show();
-		
-		
 		
 		
 	}
@@ -313,16 +326,22 @@ public class Main extends Application implements Initializable{
 		
 		b.setOnAction(new EventHandler<ActionEvent>() {
 		    @Override public void handle(ActionEvent e) {
-		    	if(GameMaster.getRound() <  7 && GameMaster.checkHasWon() == false) {
+		    	if(GameMaster.getRound() <  8 && GameMaster.checkGameOver() == false) {
+			    	GameMaster.increaseRound();
 			    	if(currentTile.equals(answerTile)) {
-			    		GameMaster.setWin();
+			    		GameMaster.setGameOver();
 			    		b.setText("You won!");
+			    		answerTile.setOpacity(1);
+			    		answerTile.updatePinColor();
+			    	}
+			    	else if(GameMaster.getRound() == 8) {
+			    		GameMaster.setGameOver();
+			    		b.setText("You lost :(");
 			    		answerTile.setOpacity(1);
 			    		answerTile.updatePinColor();
 			    	}
 			    	else {
 			    		currentTile.deactivatePins();
-				    	GameMaster.increaseRound();
 				    	currentTile = tileArr[GameMaster.getRound()];
 				    	currentTile.setOpacity(1);
 				    	currentTile.activatePins();
@@ -332,7 +351,5 @@ public class Main extends Application implements Initializable{
 
 		    }
 		});
-		
-
 		}
 }
