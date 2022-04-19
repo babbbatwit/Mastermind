@@ -13,14 +13,13 @@ public class Pin {
 		visual = v;
 		color = c;
 		visual.setFill(Color.BLUE);
-		isClickable = true;
 	}
 	public Pin(int c) {
 		color = c;
 	}
 	public Pin(Circle v) {
 		visual = v;
-		isClickable = false;
+		isClickable = true;
 		color = 0;
 	}
 	public Pin() {

@@ -8,47 +8,34 @@ public class GameMaster {
 		round = 0;
 		
 	}
-	/**
-	public static Tile answerGen() {
-		int[] numArr = noRepeatBoard();
-		Pin p1 = new Pin(numArr[0]);
-		Pin p2 = new Pin(numArr[1]);
-		Pin p3 = new Pin(numArr[2]);
-		Pin p4 = new Pin(numArr[3]);
-		Tile answerTile = new Tile(p1,p2,p3,p4);
-		return answerTile;
+
+	public static boolean winChecker(Tile t1, Tile answer) {
+		hasWon = t1.equals(answer);
+		return hasWon;
 	}
 	
-	public static int[] noRepeatBoard(){
-		boolean isTaken = false;
-		int[] generatedArray = new int[4];
-		Random rand = new Random();
-		
-		for (int i = 0; i < 4;) {
-			int tempNum = rand.nextInt(6) + 1;
-			for (int j = 0; j < 4; j++) {
-				if (generatedArray[j] == tempNum) {
-					isTaken = true;
+	public static int hits(Tile t1, Tile answer){
+		int hits = 0;
+		for(int i = 1; i <= 4; i++) {
+			if(t1.getPinsColor(i) == answer.getPinsColor(i)) {
+				hits += 1;
+			}
+		}
+		return hits;
+	}
+	
+	public static int blows(Tile t1, Tile answer) {
+		int blows = 0;
+		for(int i = 1; i <= 4; i++) {
+			for(int j = 1; j <= 4; j++) {
+				if(j != i) {
+					if(t1.getPinsColor(i) == answer.getPinsColor(j)) {
+						blows += 1;
+					}
 				}
 			}
-			if (isTaken == false) {
-				generatedArray[i] = tempNum;
-				i++;
-			} else {
-				isTaken = false;
-			}
 		}
-		return generatedArray;
+		return blows;
 	}
-	**/
-	//currently unused but could be used for harder version of the game
-	public static int[] repeatingBoard(){
-		int[] generatedArray = new int[4];
-		Random rand = new Random();
-		
-		for (int i = 0; i < 4;) {
-			generatedArray[i] = rand.nextInt(6) + 1;
-		}
-		return generatedArray;
-	}
+
 }

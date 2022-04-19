@@ -67,4 +67,44 @@ public class Tile {
 	public void setOpacity(double i) {
 		container.setOpacity(i);
 	}
+	
+	//currently unused but could be used for harder version of the game
+	public static int[] repeatingBoard(){
+		int[] generatedArray = new int[4];
+		Random rand = new Random();
+		
+		for (int i = 0; i < 4;) {
+			generatedArray[i] = rand.nextInt(6) + 1;
+		}
+		return generatedArray;
+	}
+	
+	@Override
+	public boolean equals(Object o){
+		if(!(o instanceof Tile)) {
+			return false;
+		}
+		else {
+			if(o.toString().equals(this.toString())) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	}
+	public int getPinsColor(int i) {
+		switch(i) {
+		case 1:
+			return p1.getColor();
+		case 2:
+			return p2.getColor();
+		case 3:
+			return p3.getColor();
+		case 4:
+			return p4.getColor();
+		default:
+			return -1;
+		}
+	}
 }

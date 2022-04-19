@@ -1,4 +1,5 @@
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 import javafx.application.Application;
@@ -10,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
@@ -156,7 +158,8 @@ public class Main extends Application implements Initializable{
 	Circle ah3;
 	@FXML
 	Circle ah4;
-	
+	@FXML
+	HBox gameBox;
 	
 	
 	@FXML
@@ -230,7 +233,58 @@ public class Main extends Application implements Initializable{
 		Pin answer3 = new Pin(ci3);
 		Pin answer4 = new Pin(ci4);
 		Tile answerTile = new Tile(answer1,answer2, answer3, answer4);
+		
+		HashMap<Circle,Pin> map=new HashMap<Circle,Pin>();
+		map.put(ca1, pa1);
+		map.put(ca2, pa2);
+		map.put(ca3, pa3);
+		map.put(ca4, pa4);
+		
+		map.put(cb1, pb1);
+		map.put(cb2, pb2);
+		map.put(cb3, pb3);
+		map.put(cb4, pb4);
+		
+		map.put(cc1, pc1);
+		map.put(cc2, pc2);
+		map.put(cc3, pc3);
+		map.put(cc4, pc4);
+		
+		map.put(cd1, pd1);
+		map.put(cd2, pd2);
+		map.put(cd3, pd3);
+		map.put(cd4, pd4);
+		
+		map.put(ce1, pe1);
+		map.put(ce2, pe2);
+		map.put(ce3, pe3);
+		map.put(ce4, pe4);
+		
+		map.put(cf1, pf1);
+		map.put(cf2, pf2);
+		map.put(cf3, pf3);
+		map.put(cf4, pf4);
+		
+		map.put(cg1, pg1);
+		map.put(cg2, pg2);
+		map.put(cg3, pg3);
+		map.put(cg4, pg4);
+		
+		map.put(ch1, ph1);
+		map.put(ch2, ph2);
+		map.put(ch3, ph3);
+		map.put(ch4, ph4);
+		
 		answerTile.answerGen();
+		
+		System.out.println(answerTile.toString());
+		gameBox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+	        public void handle(MouseEvent mouseEvent) {
+	        	if(mouseEvent.getTarget() instanceof Circle) {
+		        	map.get((Circle) mouseEvent.getTarget()).onClick();
+	        	}
+	        }
+	    });
 		
 		int rounds = 0;
 		boolean gameOver = false;
@@ -238,14 +292,6 @@ public class Main extends Application implements Initializable{
 		while(rounds < 9 && gameOver == false) {
 			
 		}
-		
-		
-		System.out.println(answerTile.toString());
-		ci1.setOnMouseClicked(new EventHandler<MouseEvent>() {
-	        @Override
-	        public void handle(MouseEvent mouseEvent) {
-	            pa1.onClick();
-	        }
-	    });
+
 		}
 }
