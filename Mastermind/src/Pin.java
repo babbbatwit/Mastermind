@@ -1,3 +1,6 @@
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
@@ -7,11 +10,17 @@ public class Pin {
 	private boolean isClickable;
 	
 	public Pin(int c, Circle v) {
-		v = visual;
+		visual = v;
 		color = c;
+		visual.setFill(Color.BLUE);
+		isClickable = true;
 	}
 	public Pin(int c) {
 		color = c;
+	}
+	public Pin(Circle v) {
+		visual = v;
+		color = 0;
 	}
 	public Pin() {
 		color = 0;
@@ -45,33 +54,36 @@ public class Pin {
 		isClickable = false;
 	}
 	public void onClick() {
-		if(color == 6) {
-			color = 1;
+		if(isClickable == true) {
+			if(color == 6) {
+				color = 1;
+			}
+			else {
+				color++;
+			}
+			switch(color) {
+			case 1:
+				visual.setFill(Color.BLUE);
+				break;
+			case 2:
+				visual.setFill(Color.RED);
+				break;
+			case 3:
+				visual.setFill(Color.GREEN);
+				break;
+			case 4:
+				visual.setFill(Color.YELLOW);
+				break;
+			case 5:
+				visual.setFill(Color.PURPLE);
+				break;
+			case 6:
+				visual.setFill(Color.BLACK);
+				break;
+			default:
+				visual.setFill(Color.WHITE);
+			}
 		}
-		else {
-			color++;
-		}
-		switch(color) {
-		case 1:
-			visual.setFill(Color.BLUE);
-			break;
-		case 2:
-			visual.setFill(Color.RED);
-			break;
-		case 3:
-			visual.setFill(Color.GREEN);
-			break;
-		case 4:
-			visual.setFill(Color.YELLOW);
-			break;
-		case 5:
-			visual.setFill(Color.PURPLE);
-			break;
-		case 6:
-			visual.setFill(Color.BLACK);
-			break;
-		default:
-			visual.setFill(Color.WHITE);
-		}
+		
 	}
 }

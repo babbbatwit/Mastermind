@@ -6,81 +6,80 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main">
    <children>
       <HBox layoutX="-1.0" layoutY="143.0" prefHeight="304.0" prefWidth="801.0">
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ca1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ca2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ca3" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ca4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cb1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cb2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cb3" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cb4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cc1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cc2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cc3" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cc4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cd1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cd2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cd3" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cd4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ce1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ce2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ce3" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ce4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cf1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cf2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cf3" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cf4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cg1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cg2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cg3" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="cg4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ch1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ch2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ch3" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ch4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ci1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ci2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ci3" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="ci4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
          </children>
@@ -92,29 +91,29 @@
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="aa2" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="88.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="aa3" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="aa4" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                </children>
             </VBox>
             <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="aa1" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ab1" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ab2" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="88.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ab3" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ab4" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                </children>
@@ -123,14 +122,14 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ac1" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ac2" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="88.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ac3" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ac4" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                </children>
@@ -139,14 +138,14 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ad1" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ad2" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="88.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ad3" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ad4" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                </children>
@@ -155,14 +154,14 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ae1" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ae2" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="88.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ae3" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ae4" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                </children>
@@ -171,14 +170,14 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="af1" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="af2" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="88.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="af3" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="af4" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                </children>
@@ -187,14 +186,14 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ag1" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ag2" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="88.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ag3" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ag4" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                </children>
@@ -203,20 +202,20 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ah1" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ah2" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="88.0" spacing="10.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ah3" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="ah4" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                      </children>
                   </HBox>
                </children>
             </VBox>
          </children>
       </HBox>
-      <Button layoutX="288.0" layoutY="518.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="154.0" text="Accept" />
+      <Button fx:id="b" layoutX="288.0" layoutY="518.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="154.0" text="Accept" />
    </children>
 </Pane>

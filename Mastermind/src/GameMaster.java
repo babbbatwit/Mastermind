@@ -2,6 +2,7 @@ import java.util.Random;
 public class GameMaster {
 
 	private static int round;
+	private static boolean hasWon;
 	
 	public static void intialize() {
 		round = 0;
