@@ -12,18 +12,20 @@ public class Pin {
 	public Pin(int c, Circle v) {
 		visual = v;
 		color = c;
-		visual.setFill(Color.BLUE);
+		visual.setFill(Color.WHITE);
 	}
 	public Pin(int c) {
 		color = c;
 	}
 	public Pin(Circle v) {
 		visual = v;
-		isClickable = true;
+		isClickable = false;
 		color = 0;
+		visual.setFill(Color.WHITE);
 	}
 	public Pin() {
 		color = 0;
+		
 	}
 	public int getColor() {
 		return color;
@@ -81,6 +83,7 @@ public class Pin {
 	public void setColor(int i) {
 		color = i;
 	}
+
 	public void onClick() {
 		if(isClickable == true) {
 			if(color == 6) {

@@ -17,6 +17,7 @@ public class Tile {
 		this.p3 = p3;
 		this.p4 = p4;
 		this.container = container;
+		this.container.setOpacity(0);
 	}
 	public Tile(Pin p1, Pin p2, Pin p3, Pin p4) {
 		this.p1 = p1;
@@ -106,5 +107,17 @@ public class Tile {
 		default:
 			return -1;
 		}
+	}
+	public void activatePins() {
+		p1.clickable();
+		p2.clickable();
+		p3.clickable();
+		p4.clickable();
+	}
+	public void deactivatePins() {
+		p1.notClickable();
+		p2.notClickable();
+		p3.notClickable();
+		p4.notClickable();
 	}
 }

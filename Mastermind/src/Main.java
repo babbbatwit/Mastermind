@@ -3,6 +3,7 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
@@ -160,10 +162,28 @@ public class Main extends Application implements Initializable{
 	Circle ah4;
 	@FXML
 	HBox gameBox;
-	
-	
+	@FXML
+	VBox box1;
+	@FXML
+	VBox box2;
+	@FXML
+	VBox box3;
+	@FXML
+	VBox box4;
+	@FXML
+	VBox box5;
+	@FXML
+	VBox box6;
+	@FXML
+	VBox box7;
+	@FXML
+	VBox box8;
+	@FXML
+	VBox answerBox;
 	@FXML
 	Button b;
+	
+	Tile currentTile;
 	
 	public void start(Stage primaryStage) throws Exception {
 
@@ -184,57 +204,60 @@ public class Main extends Application implements Initializable{
 		Pin pa2 = new Pin(ca2);
 		Pin pa3 = new Pin(ca3);
 		Pin pa4 = new Pin(ca4);
-		Tile t1 = new Tile(pa1,pa2,pa3,pa4);
+		Tile t1 = new Tile(pa1,pa2,pa3,pa4,box1);
 		
 		Pin pb1 = new Pin(cb1);
 		Pin pb2 = new Pin(cb2);
 		Pin pb3 = new Pin(cb3);
 		Pin pb4 = new Pin(cb4);
-		Tile t2 = new Tile(pb1,pb2,pb3,pb4);
+		Tile t2 = new Tile(pb1,pb2,pb3,pb4,box2);
 		
 		Pin pc1 = new Pin(cc1);
 		Pin pc2 = new Pin(cc2);
 		Pin pc3 = new Pin(cc3);
 		Pin pc4 = new Pin(cc4);
-		Tile t3 = new Tile(pc1,pc2,pc3,pc4);
+		Tile t3 = new Tile(pc1,pc2,pc3,pc4,box3);
 		
 		Pin pd1 = new Pin(cd1);
 		Pin pd2 = new Pin(cd2);
 		Pin pd3 = new Pin(cd3);
 		Pin pd4 = new Pin(cd4);
-		Tile t4 = new Tile(pd1,pd2,pd3,pd4);
+		Tile t4 = new Tile(pd1,pd2,pd3,pd4,box4);
 		
 		Pin pe1 = new Pin(ce1);
 		Pin pe2 = new Pin(ce2);
 		Pin pe3 = new Pin(ce3);
 		Pin pe4 = new Pin(ce4);
-		Tile t5 = new Tile(pe1,pe2,pe3,pe4);
+		Tile t5 = new Tile(pe1,pe2,pe3,pe4,box5);
 		
 		Pin pf1 = new Pin(cf1);
 		Pin pf2 = new Pin(cf2);
 		Pin pf3 = new Pin(cf3);
 		Pin pf4 = new Pin(cf4);
-		Tile t6 = new Tile(pf1,pf2,pf3,pf4);
+		Tile t6 = new Tile(pf1,pf2,pf3,pf4,box6);
 		
 		Pin pg1 = new Pin(cg1);
 		Pin pg2 = new Pin(cg2);
 		Pin pg3 = new Pin(cg3);
 		Pin pg4 = new Pin(cg4);
-		Tile t7 = new Tile(pg1,pg2,pg3,pg4);
+		Tile t7 = new Tile(pg1,pg2,pg3,pg4,box7);
 		
 		Pin ph1 = new Pin(ch1);
 		Pin ph2 = new Pin(ch2);
 		Pin ph3 = new Pin(ch3);
 		Pin ph4 = new Pin(ch4);
-		Tile t8 = new Tile(ph1,ph2,ph3,ph4);
+		Tile t8 = new Tile(ph1,ph2,ph3,ph4,box8);
 		
 		Pin answer1 = new Pin(ci1);
 		Pin answer2 = new Pin(ci2);
 		Pin answer3 = new Pin(ci3);
 		Pin answer4 = new Pin(ci4);
-		Tile answerTile = new Tile(answer1,answer2, answer3, answer4);
+		Tile answerTile = new Tile(answer1,answer2, answer3,answer4,answerBox);
 		
 		HashMap<Circle,Pin> map=new HashMap<Circle,Pin>();
+		
+		Tile[] tileArr = {t1,t2,t3,t4,t5,t6,t7,t8};
+		currentTile = t1;
 		map.put(ca1, pa1);
 		map.put(ca2, pa2);
 		map.put(ca3, pa3);
@@ -276,6 +299,8 @@ public class Main extends Application implements Initializable{
 		map.put(ch4, ph4);
 		
 		answerTile.answerGen();
+		currentTile.activatePins();
+		currentTile.setOpacity(1);
 		
 		System.out.println(answerTile.toString());
 		gameBox.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -286,12 +311,28 @@ public class Main extends Application implements Initializable{
 	        }
 	    });
 		
-		int rounds = 0;
-		boolean gameOver = false;
+		b.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	if(GameMaster.getRound() <  7 && GameMaster.checkHasWon() == false) {
+			    	if(currentTile.equals(answerTile)) {
+			    		GameMaster.setWin();
+			    		b.setText("You won!");
+			    		answerTile.setOpacity(1);
+			    		answerTile.updatePinColor();
+			    	}
+			    	else {
+			    		currentTile.deactivatePins();
+				    	GameMaster.increaseRound();
+				    	currentTile = tileArr[GameMaster.getRound()];
+				    	currentTile.setOpacity(1);
+				    	currentTile.activatePins();
+			    	}
+			    	
+		    	}
+
+		    }
+		});
 		
-		while(rounds < 9 && gameOver == false) {
-			
-		}
 
 		}
 }

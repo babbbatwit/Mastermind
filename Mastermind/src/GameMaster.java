@@ -5,7 +5,7 @@ public class GameMaster {
 	private static boolean hasWon;
 	
 	public static void intialize() {
-		round = 0;
+		round = 1;
 		
 	}
 
@@ -38,4 +38,17 @@ public class GameMaster {
 		return blows;
 	}
 
+	public static void increaseRound() {
+		round += 1;
+	}
+	
+	public static int getRound() {
+		return round;
+	}
+	public static boolean checkHasWon() {
+		return hasWon;
+	}
+	public static void setWin() {
+		hasWon = true;
+	}
 }
