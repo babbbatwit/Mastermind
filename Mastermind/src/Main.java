@@ -169,13 +169,22 @@ public class Main extends Application implements Initializable{
 		primaryStage.setTitle("Mastermind");
 		primaryStage.setScene(scene);
 		primaryStage.show();
-		Tile masterTile = GameMaster.answerGen();
-		System.out.println(masterTile.toString());
+		
+		
+		
+		
 	}
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resourses) {
 		Pin pin = new Pin(0,ca1);
+		Pin answer1 = new Pin(ci1);
+		Pin answer2 = new Pin(ci2);
+		Pin answer3 = new Pin(ci3);
+		Pin answer4 = new Pin(ci4);
+		Tile answerTile = new Tile(answer1,answer2, answer3, answer4);
+		answerTile.answerGen();
+		System.out.println(answerTile.toString());
 		ca1.setOnMouseClicked(new EventHandler<MouseEvent>() {
 	        @Override
 	        public void handle(MouseEvent mouseEvent) {

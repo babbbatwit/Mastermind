@@ -8,7 +8,7 @@ public class GameMaster {
 		round = 0;
 		
 	}
-	
+	/**
 	public static Tile answerGen() {
 		int[] numArr = noRepeatBoard();
 		Pin p1 = new Pin(numArr[0]);
@@ -40,6 +40,7 @@ public class GameMaster {
 		}
 		return generatedArray;
 	}
+	**/
 	//currently unused but could be used for harder version of the game
 	public static int[] repeatingBoard(){
 		int[] generatedArray = new int[4];

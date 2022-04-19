@@ -28,6 +28,31 @@ public class Pin {
 	public int getColor() {
 		return color;
 	}
+	public void updateColor() {
+		switch(color) {
+		case 1:
+			visual.setFill(Color.BLUE);
+			break;
+		case 2:
+			visual.setFill(Color.RED);
+			break;
+		case 3:
+			visual.setFill(Color.GREEN);
+			break;
+		case 4:
+			visual.setFill(Color.YELLOW);
+			break;
+		case 5:
+			visual.setFill(Color.PURPLE);
+			break;
+		case 6:
+			visual.setFill(Color.BLACK);
+			break;
+		default:
+			visual.setFill(Color.WHITE);
+		}
+	}
+	
 	public String getColorName() {
 		switch(color) {
 		case 1:
@@ -52,6 +77,9 @@ public class Pin {
 	}
 	public void notClickable() {
 		isClickable = false;
+	}
+	public void setColor(int i) {
+		color = i;
 	}
 	public void onClick() {
 		if(isClickable == true) {
