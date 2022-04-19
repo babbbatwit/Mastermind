@@ -20,6 +20,7 @@ public class Pin {
 	}
 	public Pin(Circle v) {
 		visual = v;
+		isClickable = false;
 		color = 0;
 	}
 	public Pin() {
@@ -111,7 +112,6 @@ public class Pin {
 			default:
 				visual.setFill(Color.WHITE);
 			}
-		}
-		
+		}	
 	}
 }
