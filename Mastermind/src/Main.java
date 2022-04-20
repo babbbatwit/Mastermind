@@ -8,19 +8,79 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 public class Main extends Application implements Initializable{
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+		
+		Button start = new Button("Start");
+		start.setTranslateX(188);
+		start.setTranslateY(440);
+		Label rules = new Label();
+		rules.setText("Welcome to Mastermind.\n" +
+                "\n" +
+                "The objective of the game is to correctly guess a secret code consisting\n" +
+                "of a series of 4 colored pegs.\n\n" +
+                "Each peg will be of one of 6 colors – Blue, Green, Orange, Purple, Red,\nand Yellow.\n" +
+                "More than one peg in the secret code could be of the same color.\nYou must guess the correct color " +
+                "and order of the code.\n\n" +
+                "You will have 10 chances to correctly guess the code.\n\nAfter every guess, the computer " +
+                "will provide you feedback in the\n form of 0 to 4 colored pegs. A black peg indicates " +
+                "that a peg in your guess is\nof the correct color and is in the correct position.\n" +
+                "A white peg indicates that a peg in your guess is of the correct color\n" +
+                "but is not in the correct position.\n\n" +
+                "NOTE: The order of the feedback pegs does not correspond to either the\npegs in the code " +
+                "or the pegs in your guess. " +
+                "\nIn other words, the color of the pegs is important, not the order they are in.\n\n");
+		rules.setTextAlignment(TextAlignment.CENTER);
+		
+		start.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                primaryStage.close();
+                try {
+					game(primaryStage);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+            }
+        });
+		
+		Group g = new Group(start,rules);
+		Scene s = new Scene(g,418,520);
+		primaryStage.setScene(s);
+		primaryStage.show();
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@FXML
 	Circle ca1;
@@ -201,14 +261,13 @@ public class Main extends Application implements Initializable{
 	
 	HitAndBlows currentHAB;
 	
-	public void start(Stage primaryStage) throws Exception {
-
+	public void game(Stage stage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Mastermind.fxml"));
 		Scene scene = new Scene(root);
-		primaryStage.setTitle("Mastermind");
-		primaryStage.setScene(scene);
-		primaryStage.show();
-		
+		stage.setTitle("Mastermind");
+		stage.setScene(scene);
+		stage.show();
+	
 		
 	}
 	
@@ -362,11 +421,12 @@ public class Main extends Application implements Initializable{
 				    	currentHAB = habArr[GameMaster.getRound()];
 				    	currentTile.setOpacity(1);
 				    	currentTile.activatePins();
-			    	}
-			    	
+			    	}			    	
 		    	}
 
 		    }
 		});
 		}
+
+
 }
