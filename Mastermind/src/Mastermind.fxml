@@ -86,7 +86,7 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="2.0" layoutY="4.0" prefHeight="127.0" prefWidth="716.0">
          <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb1" alignment="CENTER" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -102,7 +102,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb2" layoutX="10.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -118,7 +118,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb3" layoutX="110.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -134,7 +134,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb4" layoutX="210.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -150,7 +150,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox layoutX="310.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb5" layoutX="310.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -166,7 +166,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox layoutX="410.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb6" layoutX="410.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -182,7 +182,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox layoutX="510.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb7" layoutX="510.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -198,7 +198,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox layoutX="611.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb8" layoutX="611.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>

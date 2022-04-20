@@ -8,7 +8,6 @@ public class Tile {
 	private Pin p2;
 	private Pin p3;
 	private Pin p4;
-	private boolean isShown;
 	private VBox container;
 	
 	public Tile(Pin p1, Pin p2, Pin p3, Pin p4, VBox container) {

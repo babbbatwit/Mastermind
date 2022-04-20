@@ -180,25 +180,27 @@ public class Main extends Application implements Initializable{
 	@FXML
 	VBox answerBox;
 	@FXML
-	VBox HB1;
+	VBox hb1;
 	@FXML
-	VBox HB2;
+	VBox hb2;
 	@FXML
-	VBox HB3;
+	VBox hb3;
 	@FXML
-	VBox HB4;
+	VBox hb4;
 	@FXML
-	VBox HB5;
+	VBox hb5;
 	@FXML
-	VBox HB6;
+	VBox hb6;
 	@FXML
-	VBox HB7;
+	VBox hb7;
 	@FXML
-	VBox HB8;
+	VBox hb8;
 	@FXML
 	Button b;
 	
 	Tile currentTile;
+	
+	HitAndBlows currentHAB;
 	
 	public void start(Stage primaryStage) throws Exception {
 
@@ -261,6 +263,17 @@ public class Main extends Application implements Initializable{
 		Pin ph4 = new Pin(ch4);
 		Tile t8 = new Tile(ph1,ph2,ph3,ph4,box8);
 		
+		HitAndBlows h1 = new HitAndBlows(aa1,aa2,aa3,aa4,hb1);
+		HitAndBlows h2 = new HitAndBlows(ab1,ab2,ab3,ab4,hb2);
+		HitAndBlows h3 = new HitAndBlows(ac1,ac2,ac3,ac4,hb3);
+		HitAndBlows h4 = new HitAndBlows(ad1,ad2,ad3,ad4,hb4);
+		HitAndBlows h5 = new HitAndBlows(ae1,ae2,ae3,ae4,hb5);
+		HitAndBlows h6 = new HitAndBlows(af1,af2,af3,af4,hb6);
+		HitAndBlows h7 = new HitAndBlows(ag1,ag2,ag3,ag4,hb7);
+		HitAndBlows h8 = new HitAndBlows(ah1,ah2,ah3,ah4,hb8);
+		
+		HitAndBlows[] habArr = {h1,h2,h3,h4,h5,h6,h7,h8};
+		currentHAB = h1;
 		Pin answer1 = new Pin(ci1);
 		Pin answer2 = new Pin(ci2);
 		Pin answer3 = new Pin(ci3);
@@ -327,6 +340,10 @@ public class Main extends Application implements Initializable{
 		b.setOnAction(new EventHandler<ActionEvent>() {
 		    @Override public void handle(ActionEvent e) {
 		    	if(GameMaster.getRound() <  8 && GameMaster.checkGameOver() == false) {
+		    		currentHAB.hits(currentTile, answerTile);
+		    		currentHAB.blows(currentTile, answerTile);
+		    		currentHAB.displayColors();
+		    		currentHAB.setOpacity(1);
 			    	GameMaster.increaseRound();
 			    	if(currentTile.equals(answerTile)) {
 			    		GameMaster.setGameOver();
@@ -343,6 +360,7 @@ public class Main extends Application implements Initializable{
 			    	else {
 			    		currentTile.deactivatePins();
 				    	currentTile = tileArr[GameMaster.getRound()];
+				    	currentHAB = habArr[GameMaster.getRound()];
 				    	currentTile.setOpacity(1);
 				    	currentTile.activatePins();
 			    	}
