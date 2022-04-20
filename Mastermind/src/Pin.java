@@ -1,6 +1,3 @@
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
@@ -9,14 +6,6 @@ public class Pin {
 	private Circle visual;
 	private boolean isClickable;
 	
-	public Pin(int c, Circle v) {
-		visual = v;
-		color = c;
-		visual.setFill(Color.WHITE);
-	}
-	public Pin(int c) {
-		color = c;
-	}
 	public Pin(Circle v) {
 		visual = v;
 		isClickable = false;

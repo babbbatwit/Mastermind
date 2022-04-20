@@ -18,7 +18,7 @@
                   <Circle fx:id="ca4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
-            <VBox fx:id="box2" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox fx:id="box2" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
                   <Circle fx:id="cb1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                   <Circle fx:id="cb2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
@@ -26,7 +26,7 @@
                   <Circle fx:id="cb4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
-            <VBox fx:id="box3" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox fx:id="box3" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
                   <Circle fx:id="cc1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                   <Circle fx:id="cc2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
@@ -34,7 +34,7 @@
                   <Circle fx:id="cc4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
-            <VBox fx:id="box4" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox fx:id="box4" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
                   <Circle fx:id="cd1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                   <Circle fx:id="cd2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
@@ -42,7 +42,7 @@
                   <Circle fx:id="cd4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
-            <VBox fx:id="box5" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox fx:id="box5" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
                   <Circle fx:id="ce1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                   <Circle fx:id="ce2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
@@ -50,7 +50,7 @@
                   <Circle fx:id="ce4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
-            <VBox fx:id="box6" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox fx:id="box6" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
                   <Circle fx:id="cf1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                   <Circle fx:id="cf2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
@@ -58,7 +58,7 @@
                   <Circle fx:id="cf4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
-            <VBox fx:id="box7" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox fx:id="box7" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
                   <Circle fx:id="cg1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                   <Circle fx:id="cg2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
@@ -66,7 +66,7 @@
                   <Circle fx:id="cg4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
-            <VBox fx:id="box8" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox fx:id="box8" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
                   <Circle fx:id="ch1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                   <Circle fx:id="ch2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
@@ -74,7 +74,7 @@
                   <Circle fx:id="ch4" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </VBox>
-            <VBox fx:id="answerBox" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <VBox fx:id="answerBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
                   <Circle fx:id="ci1" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
                   <Circle fx:id="ci2" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
@@ -86,7 +86,7 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="2.0" layoutY="4.0" prefHeight="127.0" prefWidth="716.0">
          <children>
-            <VBox fx:id="hb1" alignment="CENTER" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb1" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -102,7 +102,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox fx:id="hb2" layoutX="10.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -118,7 +118,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox fx:id="hb3" layoutX="110.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb3" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -134,7 +134,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox fx:id="hb4" layoutX="210.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb4" layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -150,7 +150,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox fx:id="hb5" layoutX="310.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb5" layoutX="310.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -166,7 +166,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox fx:id="hb6" layoutX="410.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb6" layoutX="410.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -182,7 +182,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox fx:id="hb7" layoutX="510.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb7" layoutX="510.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
@@ -198,7 +198,7 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox fx:id="hb8" layoutX="611.0" layoutY="10.0" opacity="0.26" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="hb8" layoutX="611.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
