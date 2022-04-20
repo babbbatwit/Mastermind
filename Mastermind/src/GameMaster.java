@@ -1,4 +1,3 @@
-import java.util.Random;
 public class GameMaster {
 
 	private static int round;
