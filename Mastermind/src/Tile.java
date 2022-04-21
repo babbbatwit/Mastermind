@@ -37,7 +37,7 @@ public class Tile {
 		p4.setColor(numArr[3]);
 	}
 	
-	public int[] noRepeatBoard(){
+	private int[] noRepeatBoard(){
 		boolean isTaken = false;
 		int[] generatedArray = new int[4];
 		Random rand = new Random();
@@ -63,7 +63,7 @@ public class Tile {
 	}
 	
 	//currently unused but could be used for harder version of the game
-	public static int[] repeatingBoard(){
+	private static int[] repeatingBoard(){
 		int[] generatedArray = new int[4];
 		Random rand = new Random();
 		
