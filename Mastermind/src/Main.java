@@ -270,7 +270,7 @@ public class Main extends Application implements Initializable{
 		stage.setTitle("Mastermind");
 		stage.setScene(scene);
 		stage.show();
-	
+		
 		
 	}
 	
