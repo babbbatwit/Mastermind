@@ -271,7 +271,7 @@ public class Main extends Application implements Initializable{
 		stage.setTitle("Mastermind");
 		stage.setScene(scene);
 		stage.show();
-	
+		
 		
 	}
 	
@@ -407,7 +407,12 @@ public class Main extends Application implements Initializable{
 		    		currentHAB.displayColors();
 		    		currentHAB.setOpacity(1);
 			    	GameMaster.increaseRound();    	
+<<<<<<< HEAD
 			    	//text1.setText("Number Of Tries: " + GameMaster.getRound() + "/8");
+=======
+			    	text1.setText("Number Of Tries: " + GameMaster.getRound() + "/8");
+			    	//
+>>>>>>> branch 'master' of https://github.com/babbbatwit/Mastermind.git
 			    	if(currentTile.equals(answerTile)) {
 			    		GameMaster.setGameOver();
 			    		b.setText("You won!");
