@@ -35,18 +35,19 @@ public class Main extends Application implements Initializable{
 		rules.setText("Welcome to Mastermind.\n" +
                 "\n" +
                 "The objective of the game is to correctly guess a secret code consisting\n" +
-                "of a series of 4 colored pegs.\n\n" +
-                "Each peg will be of one of 6 colors – Blue, Green, Orange, Purple, Red,\nand Yellow.\n" +
-                "More than one peg in the secret code could be of the same color.\nYou must guess the correct color " +
+                "of a series of 4 colored pins.\n\n" +
+                "Each pin will be of one of 6 colors – blue, red, green, yellow, purple,\nand black.\n" +
+                "The answer has no repeating color pins.\nYou must guess the correct color " +
                 "and order of the code.\n\n" +
-                "You will have 10 chances to correctly guess the code.\n\nAfter every guess, the computer " +
-                "will provide you feedback in the\n form of 0 to 4 colored pegs. A black peg indicates " +
-                "that a peg in your guess is\nof the correct color and is in the correct position.\n" +
-                "A white peg indicates that a peg in your guess is of the correct color\n" +
+                "You will have 8 chances to correctly guess the code.\n\nAfter every guess, the computer " +
+                "will provide you feedback in the\n form of 0 to 4 colored pins. A green pin indicates a hit which is that " +
+                "that a pin in \nyour guess is of the correct color and is in the correct position.\n" +
+                "A yellow pin indicates a blow which is that a pin in your guess is of the \ncorrect color " +
                 "but is not in the correct position.\n\n" +
-                "NOTE: The order of the feedback pegs does not correspond to either the\npegs in the code " +
-                "or the pegs in your guess. " +
-                "\nIn other words, the color of the pegs is important, not the order they are in.\n\n");
+                "Click an active pin to change its color and use the \naccept button to submit your guess.\n\n" +
+                "NOTE: The order of the hit and blows does not correspond to either the\npins in the code" +
+                "or the pins in your guess. \n" +
+                "\nIn other words, the color of the pins is important, not the order they are in.\n\n");
 		rules.setTextAlignment(TextAlignment.CENTER);
 		
 		start.setOnAction(new EventHandler<ActionEvent>() {
@@ -64,7 +65,7 @@ public class Main extends Application implements Initializable{
         });
 		
 		Group g = new Group(start,rules);
-		Scene s = new Scene(g,418,520);
+		Scene s = new Scene(g,440,520);
 		primaryStage.setScene(s);
 		primaryStage.show();
 	}
