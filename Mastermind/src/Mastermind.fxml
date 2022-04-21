@@ -5,6 +5,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main">
    <children>
@@ -216,6 +218,10 @@
             </VBox>
          </children>
       </HBox>
-      <Button fx:id="b" layoutX="288.0" layoutY="518.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="154.0" text="Accept" />
+      <Button fx:id="b" layoutX="283.0" layoutY="540.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="154.0" text="Accept" />
+      <Line endX="440.20001220703125" endY="1.52587890625E-5" layoutX="360.0" layoutY="131.0" startX="-360.0" startY="1.52587890625E-5" />
+      <Line endX="-100.0" endY="479.39996337890625" layoutX="812.0" layoutY="120.0" startX="-100.00006103515625" startY="-120.79999542236328" />
+      <Line endX="439.99993896484375" layoutX="360.0" layoutY="465.0" startX="-360.0" />
+      <Text fx:id="text1" layoutX="306.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number Of Tries:  0/8" />
    </children>
 </Pane>
