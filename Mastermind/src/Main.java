@@ -20,17 +20,22 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
+
 public class Main extends Application implements Initializable{
 	public static void main(String[] args) {
 		launch(args);
 	}
 	
+	
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		
-		Button start = new Button("Start");
-		start.setTranslateX(188);
-		start.setTranslateY(440);
+		Button easy = new Button("Easy mode");
+		Button hard = new Button("Hard mode");
+		easy.setTranslateX(148);
+		easy.setTranslateY(480);
+		hard.setTranslateX(228);
+		hard.setTranslateY(480);
 		Label rules = new Label();
 		rules.setText("Welcome to Mastermind.\n" +
                 "\n" +
@@ -47,12 +52,30 @@ public class Main extends Application implements Initializable{
                 "Click an active pin to change its color and use the \naccept button to submit your guess.\n\n" +
                 "NOTE: The order of the hit and blows does not correspond to either the\npins in the code" +
                 "or the pins in your guess. \n" +
-                "\nIn other words, the color of the pins is important, not the order they are in.\n\n");
+                "\nIn other words, the color of the pins is important, not the order they are in.\n\n"+
+                "Easy mode: No repeating colors in code\n Hard mode: Reapting colors in code");
 		rules.setTextAlignment(TextAlignment.CENTER);
 		
-		start.setOnAction(new EventHandler<ActionEvent>() {
+		easy.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+            	Tile.difficulty = false;
+                primaryStage.close();
+                try {
+					game(primaryStage);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+            }
+        });
+	
+		
+		hard.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+            	Tile.difficulty = true;
                 primaryStage.close();
                 try {
 					game(primaryStage);
@@ -64,11 +87,14 @@ public class Main extends Application implements Initializable{
             }
         });
 		
-		Group g = new Group(start,rules);
+		rules.setTextAlignment(TextAlignment.CENTER);
+		
+		Group g = new Group(easy,hard,rules);
 		Scene s = new Scene(g,440,520);
 		primaryStage.setScene(s);
 		primaryStage.show();
 	}
+	
 
 	
 	@FXML
@@ -252,18 +278,30 @@ public class Main extends Application implements Initializable{
 	
 	HitAndBlows currentHAB;
 	
+
+
+
+	
+	
 	public void game(Stage stage) throws Exception {
+
 		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Mastermind.fxml"));
 		Scene scene = new Scene(root);
 		stage.setTitle("Mastermind");
 		stage.setScene(scene);
 		stage.show();
 		
-		
 	}
-	
+
 	@Override
 	public void initialize(URL location, ResourceBundle resourses) {
+		Pin answer1 = new Pin(ci1);
+		Pin answer2 = new Pin(ci2);
+		Pin answer3 = new Pin(ci3);
+		Pin answer4 = new Pin(ci4);
+		Tile answerTile = new Tile(answer1,answer2, answer3,answer4,answerBox);
+		answerTile.answerGen();
+		
 		Pin pa1 = new Pin(ca1);
 		Pin pa2 = new Pin(ca2);
 		Pin pa3 = new Pin(ca3);
@@ -323,11 +361,7 @@ public class Main extends Application implements Initializable{
 		
 		HitAndBlows[] habArr = {h1,h2,h3,h4,h5,h6,h7,h8};
 		currentHAB = h1;
-		Pin answer1 = new Pin(ci1);
-		Pin answer2 = new Pin(ci2);
-		Pin answer3 = new Pin(ci3);
-		Pin answer4 = new Pin(ci4);
-		Tile answerTile = new Tile(answer1,answer2, answer3,answer4,answerBox);
+
 		
 		HashMap<Circle,Pin> map=new HashMap<Circle,Pin>();
 		
@@ -372,8 +406,7 @@ public class Main extends Application implements Initializable{
 		map.put(ch2, ph2);
 		map.put(ch3, ph3);
 		map.put(ch4, ph4);
-		
-		answerTile.answerGen();
+
 		currentTile.activatePins();
 		currentTile.setOpacity(1);
 		

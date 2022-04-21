@@ -9,6 +9,7 @@ public class Tile {
 	private Pin p3;
 	private Pin p4;
 	private VBox container;
+	public static boolean difficulty;
 	
 	public Tile(Pin p1, Pin p2, Pin p3, Pin p4, VBox container) {
 		this.p1 = p1;
@@ -30,7 +31,13 @@ public class Tile {
 	}
 	
 	public void answerGen() {
-		int[] numArr = noRepeatBoard();
+		int[] numArr;
+		if(difficulty == false) {
+			numArr = noRepeatBoard();
+		}
+		else {
+			numArr = repeatingBoard();
+		}
 		p1.setColor(numArr[0]);
 		p2.setColor(numArr[1]);
 		p3.setColor(numArr[2]);
@@ -62,12 +69,11 @@ public class Tile {
 		container.setOpacity(i);
 	}
 	
-	//currently unused but could be used for harder version of the game
-	private static int[] repeatingBoard(){
+	private int[] repeatingBoard(){
 		int[] generatedArray = new int[4];
 		Random rand = new Random();
 		
-		for (int i = 0; i < 4;) {
+		for (int i = 0; i < 4; i++) {
 			generatedArray[i] = rand.nextInt(6) + 1;
 		}
 		return generatedArray;
