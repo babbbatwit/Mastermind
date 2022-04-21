@@ -1,6 +1,8 @@
+
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -14,8 +16,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
@@ -67,6 +71,18 @@ public class Main extends Application implements Initializable{
 		primaryStage.setScene(s);
 		primaryStage.show();
 	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@FXML
 	Circle ca1;
@@ -242,6 +258,8 @@ public class Main extends Application implements Initializable{
 	VBox hb8;
 	@FXML
 	Button b;
+	@FXML
+	Text text1;
 	
 	Tile currentTile;
 	
@@ -388,7 +406,8 @@ public class Main extends Application implements Initializable{
 		    		currentHAB.blows(currentTile, answerTile);
 		    		currentHAB.displayColors();
 		    		currentHAB.setOpacity(1);
-			    	GameMaster.increaseRound();
+			    	GameMaster.increaseRound();    	
+			    	text1.setText("Number Of Tries: " + GameMaster.getRound() + "/8");
 			    	if(currentTile.equals(answerTile)) {
 			    		GameMaster.setGameOver();
 			    		b.setText("You won!");
@@ -409,8 +428,7 @@ public class Main extends Application implements Initializable{
 				    	currentTile.activatePins();
 			    	}			    	
 		    	}
-
 		    }
 		});
-		}
+		}	
 }
