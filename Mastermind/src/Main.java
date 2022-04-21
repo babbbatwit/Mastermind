@@ -1,4 +1,3 @@
-
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -68,7 +67,8 @@ public class Main extends Application implements Initializable{
 		Scene s = new Scene(g,418,520);
 		primaryStage.setScene(s);
 		primaryStage.show();
-	}	
+	}
+
 	
 	@FXML
 	Circle ca1;
@@ -392,7 +392,7 @@ public class Main extends Application implements Initializable{
 		    		currentHAB.blows(currentTile, answerTile);
 		    		currentHAB.displayColors();
 		    		currentHAB.setOpacity(1);
-
+			    	GameMaster.increaseRound();    	
 			    	if(currentTile.equals(answerTile)) {
 			    		GameMaster.setGameOver();
 			    		b.setText("You won!");
