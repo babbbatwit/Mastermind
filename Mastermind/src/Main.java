@@ -2,7 +2,6 @@
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -16,7 +15,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
@@ -70,19 +68,7 @@ public class Main extends Application implements Initializable{
 		Scene s = new Scene(g,418,520);
 		primaryStage.setScene(s);
 		primaryStage.show();
-	}
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 	
 	@FXML
 	Circle ca1;
@@ -406,13 +392,7 @@ public class Main extends Application implements Initializable{
 		    		currentHAB.blows(currentTile, answerTile);
 		    		currentHAB.displayColors();
 		    		currentHAB.setOpacity(1);
-			    	GameMaster.increaseRound();    	
-<<<<<<< HEAD
-			    	//text1.setText("Number Of Tries: " + GameMaster.getRound() + "/8");
-=======
-			    	text1.setText("Number Of Tries: " + GameMaster.getRound() + "/8");
-			    	//
->>>>>>> branch 'master' of https://github.com/babbbatwit/Mastermind.git
+
 			    	if(currentTile.equals(answerTile)) {
 			    		GameMaster.setGameOver();
 			    		b.setText("You won!");
