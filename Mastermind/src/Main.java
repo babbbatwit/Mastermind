@@ -408,6 +408,7 @@ public class Main extends Application implements Initializable{
 		    		currentHAB.setOpacity(1);
 			    	GameMaster.increaseRound();    	
 			    	text1.setText("Number Of Tries: " + GameMaster.getRound() + "/8");
+			    	//
 			    	if(currentTile.equals(answerTile)) {
 			    		GameMaster.setGameOver();
 			    		b.setText("You won!");
